@@ -157,16 +157,6 @@ In feature engineering stage 2, we will add a 5th feature. We will take the 75 m
 
 Given below are the model performances for all the models tried so far. 
 
-### Comparison of the best model performances achieved originally.\
+### Comparison of the best model performances achieved.
 
-```from prettytable import PrettyTable
-table = PrettyTable()
-table.field_names = ["Model", "Vectorizer", "CV Log Loss", "Test Log Loss", "Misclassification Error"]
-table.add_row(["Random Model",'Response Coded', "~2.5", "~2.5", ">65%"])
-
-table.add_row(["LR (Class Balancing + Feature Engineering 1)",'TFIDF', 0.456, 0.970, "33.23%"])
-table.add_row(["LR (No Class Balancing + Feature Engineering 1)",'TFIDF', 0.445, 0.963, "33.24%"])
-table.add_row(["LR (Class Balancing + Feature Engineering 2)",'TFIDF', 0.448, 0.925, "32.48%"])
-table.add_row(["LR (Class Balancing + Feature Engineering 2)",'TFIDF', 0.439, 0.92, "32.03%"])
-
-print(table)```
+<img src='images/perf.png'>
