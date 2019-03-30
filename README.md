@@ -37,6 +37,18 @@
 
 <h3>2.1.1. Data Overview</h3>
 
+```from prettytable import PrettyTable
+table = PrettyTable()
+table.field_names = ["Model", "Vectorizer", "CV Log Loss", "Test Log Loss", "Misclassification Error"]
+table.add_row(["Random Model",'Response Coded', "~2.5", "~2.5", ">65%"])
+
+table.add_row(["LR (Class Balancing + Feature Engineering 1)",'TFIDF', 0.456, 0.970, "33.23%"])
+table.add_row(["LR (No Class Balancing + Feature Engineering 1)",'TFIDF', 0.445, 0.963, "33.24%"])
+table.add_row(["LR (Class Balancing + Feature Engineering 2)",'TFIDF', 0.448, 0.925, "32.48%"])
+table.add_row(["LR (Class Balancing + Feature Engineering 2)",'TFIDF', 0.439, 0.92, "32.03%"])
+
+print(table)```
+
 - Source: https://www.kaggle.com/c/msk-redefining-cancer-treatment/data
 - We have two data files: one conatins the information about the genetic mutations and the other contains the clinical evidence (text) that  human experts/pathologists use to classify the genetic mutations. 
 - Both these data files are have a common column called ID
